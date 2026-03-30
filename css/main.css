@@ -98,16 +98,10 @@ header {
 }
 
 
-/* Instrument Labels Lightbox */
-.drop-square {
-    position: relative;
-}
-
-/* Hidden label */
+/* Instrument Label Box */
 .drop-square::after {
     content: attr(data-label);
     position: absolute;
-    top: -40px; /* above the drop zone */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.95);
@@ -123,12 +117,10 @@ header {
     transition: opacity 0.25s ease;
 }
 
-/* Show on hover */
 .drop-square:hover::after {
     opacity: 1;
 }
 
-/* Optional: show on click (mobile-friendly) */
 .drop-square.show-label::after {
     opacity: 1;
 }
