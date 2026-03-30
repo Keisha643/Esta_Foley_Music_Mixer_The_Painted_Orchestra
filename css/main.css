@@ -206,6 +206,7 @@ header {
     left: -275px;
 }
 
+.instruments[data-type="guitar"] {
 .instruments[data-type="horn"] {
     top: -920px;
     left: -550px;
@@ -216,6 +217,7 @@ header {
     left: 560px;
 }
 
+.instruments[data-type="tuba"] {
 .instruments[data-type="drums"] {
     top: -780px;
     left: 280px;
