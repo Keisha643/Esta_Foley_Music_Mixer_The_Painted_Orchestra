@@ -1,0 +1,230 @@
+body {
+    background-color: rgb(71, 7, 20);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 10px;
+    border-bottom: 4px solid #ffdc19;
+    border-radius: 0 0 50px 50px;
+}
+
+#nav-text ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 8rem;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 2px rgb(69, 68, 68);
+    font-size: 20px;
+    text-align: center;
+}
+
+#nav-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-box {
+    color: white;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#nav-text a:hover {
+    color: #fbfb5d;
+    font-size: 25px;
+    border-bottom: solid 2px whitesmoke;
+}
+
+
+/* Main Section */
+#drop-zones-container {
+    width: 100%;
+    margin: 2px;
+}
+
+.drop-square.filled {
+    border: none;
+}
+
+
+/* Drop Zones */
+.drop-square {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: dotted 2px rgb(250, 0, 0);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-square[data-accepts="piano"]  { 
+    top: -500px; 
+    left: 430px; 
+}
+
+.drop-square[data-accepts="flute"]  { 
+    top: -510px; 
+    left: 400px; 
+}
+
+.drop-square[data-accepts="guitar"] { 
+    top: -520px; 
+    left: 420px; 
+}
+
+.drop-square[data-accepts="harp"]   { 
+    top: -320px; 
+    left: 140px; 
+}
+
+.drop-square[data-accepts="violin"] { 
+    top: -340px; 
+    left: 160px; 
+}
+
+.drop-square[data-accepts="tuba"]   { 
+    top: -319px; 
+    left: 170px; 
+}
+
+
+/* Instruments */
+.instruments {
+    margin: 0 auto;
+    width: 100px;
+    cursor: grab;
+    position: relative;
+}
+
+.instruments[data-type="piano"] {
+    top: -580px;
+    left: -39px;
+}
+
+.instruments[data-type="flute"] {
+    top: -670px;
+    left: -275px;
+}
+
+.instruments[data-type="horn"] {
+    top: -920px;
+    left: -550px;
+}
+
+.instruments[data-type="harp"] {
+    top: -999px;
+    left: 560px;
+}
+
+.instruments[data-type="drums"] {
+    top: -780px;
+    left: 280px;
+}
+
+.instruments[data-type="violin"] {
+    top: -670px;
+    left: 50px;
+}
+
+
+/* Instruction Section */
+#how-to {
+    font-size: 30px;
+    /* margin: 25px; */
+    padding-bottom: 29px;
+    border-bottom: solid 3px #ffdc19;
+    color: white;
+}
+
+#how-to p {
+    text-align: center;
+}
+
+
+/* Play/Pause, Reset, and Volume */
+.controls {
+    position: relative;
+    top: -430px;  
+    left: 330px;  
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#reset-btn, #play-btn, #pause-btn {
+    background: linear-gradient(#3a0008, #8b001c);
+    color: #ffdc19;
+    border: 2px solid #ffdc19;
+    padding: 12px 13px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.2s ease;
+}
+
+#reset-btn:hover, #play-btn:hover, #pause-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    color: #310606;
+    background: #fbfb5d;
+}
+
+#audioSlider {
+    width: 220px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+}
+
+#audioSlider::-webkit-slider-runnable-track {
+    background: #ffdc19;
+    height: 6px;
+    border-radius: 4px;
+}
+
+#audioSlider::-moz-range-track {
+    background: #ffdc19;
+    height: 6px;
+    border-radius: 4px;
+}
+
+#audioSlider::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    background: #8b001c;
+    border-radius: 50%;
+    border: 2px solid #ffdc19;
+    margin-top: -6px; 
+    cursor: pointer;
+}
+
+#audioSlider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #8b001c;
+    border-radius: 50%;
+    border: 2px solid #ffdc19;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
