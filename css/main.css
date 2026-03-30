@@ -44,6 +44,95 @@ header {
     border-bottom: solid 2px whitesmoke;
 }
 
+.lightbox { 
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    z-index: 2;
+    display:none;
+    background-repeat: no-repeat;
+    background-size: 55vh; 
+    background-position: 40px bottom;
+}
+
+.lightbox:target { 
+    display: block; 
+    opacity: 1;
+}
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 90%;
+    color: #fff07d;
+    font-size: 4em;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.lightbox_close:hover { 
+    opacity: 0.5; 
+    color: rgb(255, 30, 30); 
+    transition: all .3s ease-in-out;
+}
+
+.lightbox article {
+    margin-left: 30%;
+    margin-top: 50px;
+    width: 600px;
+}
+
+.lb_heading h3 {
+    font-size: 59px;
+    margin: 30px;
+    color: #ffdc19;
+}
+
+.lb_heading p {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+
+/* Instrument Labels Lightbox */
+.drop-square {
+    position: relative;
+}
+
+/* Hidden label */
+.drop-square::after {
+    content: attr(data-label);
+    position: absolute;
+    top: -40px; /* above the drop zone */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+/* Show on hover */
+.drop-square:hover::after {
+    opacity: 1;
+}
+
+/* Optional: show on click (mobile-friendly) */
+.drop-square.show-label::after {
+    opacity: 1;
+}
+
 
 /* Main Section */
 #drop-zones-container {
@@ -117,6 +206,7 @@ header {
     left: -275px;
 }
 
+.instruments[data-type="guitar"] {
 .instruments[data-type="horn"] {
     top: -920px;
     left: -550px;
@@ -127,6 +217,7 @@ header {
     left: 560px;
 }
 
+.instruments[data-type="tuba"] {
 .instruments[data-type="drums"] {
     top: -780px;
     left: 280px;
