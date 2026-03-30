@@ -3,9 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>The Painted Orchestra Music Mixer</title>
 </head>
+
+
 <body>
-    
+    <header class="grid-con center-grid-con">
+            <h1 class="hidden">Music Mixer Header</h1>
+            <div class="col-start-1 col-end-2 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-3" id="logo">
+                <img src="images/tpo-logo.svg" alt="The Painted Orchestra Logo">
+            </div>
+
+            <nav class="nav-box col-start-2 col-end-5 m-col-start-4 m-col-end-13 l-col-end-4 l-col-end-13" id="nav-text">
+                <ul class="col-span-full">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">How To Play</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+    <main>
+        <!-- Main Hero Section -->
+        <section id="main-bckgrd">
+            <h2 class="visually-hidden">Music Mixer Main Background</h2>
+            <img
+            sizes="(max-width: 1900px) 100vw, 1900px"
+            srcset="
+            images/mmm-main-backgrnd_z9phyw_c_scale,w_768.jpg 768w,
+            images/mmm-main-backgrnd_z9phyw_c_scale,w_1224.jpg 1224w,
+            images/mmm-main-backgrnd_z9phyw_c_scale,w_1594.jpg 1594w,
+            images/mmm-main-backgrnd_z9phyw_c_scale,w_1900.jpg 1900w"
+            src="images/mmm-main-backgrnd_z9phyw_c_scale,w_1900.jpg"
+            alt="Music Mixer Main Background">
+        </section>
+
+
+        <!-- Drop Zones -->
+         <div id="drop-zones-container">
+            <section class="grid-con center-grid-con">
+                <h2 class="visually-hidden">Drop Zones</h2>
+                <div class="drop-square" data-accepts="piano"></div>
+                <div class="drop-square" data-accepts="flute"></div>
+                <div class="drop-square" data-accepts="guitar"></div>
+                <div class="drop-square" data-accepts="harp"></div>
+                <div class="drop-square" data-accepts="violin"></div>
+                <div class="drop-square" data-accepts="tuba"></div>
+        </section>
+         </div>
+        
+
+
+        <!-- Instruments -->
+         <div id="instruments-container">
+            <section class="grid-con center-grid-con">
+            <h2 class="visually-hidden">Intruments</h2>
+            <div class="instruments instruments1 col-start-1 col-end-3 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" draggable="true" data-type="piano">
+                    <img src="images/piano-icon.svg" alt="Piano SVG Icon">
+                    <audio id="piano" preload="auto">
+                    <source src="audio/piano.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div class="instruments instruments2 col-start-3 col-end-5 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9" draggable="true" data-type="flute">
+                    <img src="images/flute-icon.svg" alt="Flute SVG Icon">
+                    <audio id="flute" preload="auto">
+                    <source src="audio/flute.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div class="instruments instruments3 col-start-1 col-end-3 m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13" draggable="true" data-type="guitar">
+                    <img src="images/guitar-icon.svg" alt="Guitar SVG Icon">
+                    <audio id="french-horn" preload="auto">
+                    <source src="audio/french_horn.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div class="instruments instruments4 col-end-5 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" draggable="true" data-type="harp">
+                    <img src="images/harp-icon.svg" alt="Harp SVG Icon">
+                     <audio id = "harp" preload="auto">
+                    <source src="audio/harp.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div class="instruments instruments5 col-start-1 col-end-3 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9" draggable="true" data-type="tuba">
+                    <img src="images/tuba-icon.svg" alt="Tuba SVG Icon">
+                     <audio id = "drums" preload="auto">
+                    <source src="audio/drums.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div class="instruments instruments6 col-start-3 col-end-5 m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13" draggable="true" data-type="violin">
+                    <img src="images/violin-icon.svg" alt="Violin SVG Icon">
+                    <audio id = "violin" preload="auto">
+                    <source src="audio/violin.wav" type="audio/wav">
+                    </audio>
+                </div>
+        </section>
+         </div>
+
+
+        <!-- Play/Pause, Reset, & Volume Buttons -->
+         <div class="controls grid-con center-grid-con">
+            <button id="pause-btn" class="col-span-full">Pause</button>
+         <button id="play-btn" class="col-span-full">Play</button>
+         <button id="reset-btn" class="col-span-full">Reset</button>
+         <input type="range" id="audioSlider" min="0" max="100" value="100">
+         </div>
+
+         <div id="instructions-section">
+            <section class="instructions grid-con center-grid-con">
+                <h2 class="visually-hidden">How To Play</h2>
+                <div class="col-span-full" id="how-to">
+                    <p>Drag and drop the instruments onto the empty score. Use the controls to play/pause, reset, and control the volume.</p>
+                </div>
+            </section>
+         </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="grid-con center-grid-con">
+            <div class="col-span-full m-col-span-full l-col-span-full">@ E&F Inc. Music Mixer</div>
+        </footer>
+
+        <script src="js/main.js"></script>
 </body>
 </html>
