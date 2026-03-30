@@ -167,7 +167,7 @@ header {
     left: 400px; 
 }
 
-.drop-square[data-accepts="guitar"] { 
+.drop-square[data-accepts="horn"] { 
     top: -520px; 
     left: 420px; 
 }
@@ -182,7 +182,7 @@ header {
     left: 160px; 
 }
 
-.drop-square[data-accepts="tuba"]   { 
+.drop-square[data-accepts="drums"]   { 
     top: -319px; 
     left: 170px; 
 }
